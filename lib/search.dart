@@ -186,7 +186,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   )
                       : Center(
                     child: Text(
-                      'No results found. Please try with a different search.',
+                      'No results found. Please try with a different searchs.',
                       style: TextStyle(fontSize: 24),
                     ),
                   ),
