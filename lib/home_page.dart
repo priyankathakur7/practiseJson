@@ -2,8 +2,11 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:praticejson/caculator.dart';
 import 'package:praticejson/product_details_screen.dart';
 import 'package:praticejson/search.dart';
+
+import 'login Page.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -141,14 +144,29 @@ class _HomePageState extends State<HomePage> {
                   child: Text("Price the product"),
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=> CalculatorScreen()));
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text("Calculator"),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=> LoginPage ()));
+                },
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text("LoginPage"),
+                ),
+              ),
             ],
           ),
         ),
-
-                ],
-              ),
-
-            );
-
+          ],
+        ),
+    );
   }
 }
