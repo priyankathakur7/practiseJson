@@ -30,6 +30,7 @@ class _LoginPageState extends State<LoginPage> {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30.3),
         ),
+        prefixIcon: Icon(Icons.person),
       ),
     );
 
@@ -47,6 +48,8 @@ class _LoginPageState extends State<LoginPage> {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
         ),
+        suffixIcon: Icon(Icons.remove_red_eye),
+        prefixIcon: Icon(Icons.lock),
       ),
     );
 
@@ -60,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
         onPressed: () {
 
             Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> DetailsLogin (username: username,),),);
+                builder: (context)=> DetailsLogin (username: username, platform: '',),),);
 
         },
         child: Text(
